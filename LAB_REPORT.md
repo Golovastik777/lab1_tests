@@ -31,46 +31,7 @@
    - Расчет геометрических параметров
    - Обработка граничных случаев
 
-## Написанные тесты
 
-### 1. TestCalculatorLogic (3 теста)
-```python
-def test_addition(self):
-    """Тест сложения."""
-    self.calculator.entry.delete(0, tk.END)
-    self.calculator.entry.insert(0, "2+3")
-    self.calculator.on_button_click("=")
-    self.assertEqual(self.calculator.entry.get(), "5")
-```
-
-### 2. TestRectangleCalculator (2 теста)
-```python
-def test_calculate_area(self):
-    """Тест расчета площади прямоугольника."""
-    self.rectangle_calc.length_entry.insert(0, "5")
-    self.rectangle_calc.width_entry.insert(0, "3")
-    self.rectangle_calc.calculate_area()
-    self.assertEqual(self.rectangle_calc.result_label.cget("text"), "Площадь: 15.0")
-```
-
-### 3. TestMathematicalFunctions (2 теста)
-```python
-def test_rectangle_area_calculation(self):
-    """Тест расчета площади прямоугольника."""
-    def calculate_rectangle_area(length, width):
-        return length * width
-    
-    self.assertEqual(calculate_rectangle_area(5, 3), 15)
-```
-
-## Результаты запуска тестов
-
-```
-----------------------------------------------------------------------
-Ran 7 tests in 2.123s
-
-OK
-```
 
 **Метрики**:
 - Всего тестов: 7
