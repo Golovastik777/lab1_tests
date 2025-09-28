@@ -1,35 +1,22 @@
 [run]
-# Исключаем файлы тестов из анализа покрытия
 omit = 
     test_*.py
     *_test.py
     tests/*
 
-# Исключаем импорты и строки, которые не нужно тестировать
 exclude_lines =
-    # Игнорируем строки с pragma: no cover
     pragma: no cover
-    # Игнорируем отладочные принты
     def __repr__
     if self\.debug
-    # Игнорируем блоки except для системных исключений
     except ImportError:
     except Exception:
-    # Игнорируем строки с pass
     pass
 
 [report]
-# Показывать пропущенные строки в отчете
 show_missing = True
-# Пропускать строки с 100% покрытием
 skip_covered = False
-# Точность процентов
 precision = 2
 
-[html]
-# Директория для HTML отчета
-directory = htmlcov
 
 [xml]
-# Файл для XML отчета (для CI/CD)
 output = coverage.xml
