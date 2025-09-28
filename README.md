@@ -103,26 +103,36 @@ py -m unittest test_calculator.py -v
 py -m unittest test_calculator -v
 ```
 
-## Технические детали
+```
+test_addition (test_calculator.TestCalculatorLogic.test_addition)
+Тест сложения. ... ok
+test_division_by_zero_error_handling (test_calculator.TestCalculatorLogic.test_division_by_zero_error_handling)
+Тест обработки ошибки деления на ноль. ... ok
+test_multiplication (test_calculator.TestCalculatorLogic.test_multiplication)
+Тест умножения. ... ok
+test_rectangle_area_calculation (test_calculator.TestMathematicalFunctions.test_rectangle_area_calculation)
+Тест расчета площади прямоугольника. ... ok
+test_rectangle_perimeter_calculation (test_calculator.TestMathematicalFunctions.test_rectangle_perimeter_calculation)     
+Тест расчета периметра прямоугольника. ... ok
+test_calculate_area (test_calculator.TestRectangleCalculator.test_calculate_area)
+Тест расчета площади прямоугольника. ... ok
+test_calculate_perimeter (test_calculator.TestRectangleCalculator.test_calculate_perimeter)
+Тест расчета периметра прямоугольника. ... ok
 
-### Используемые технологии:
-- **Python 3.x** - основной язык программирования
-- **Tkinter** - библиотека для создания GUI
-- **unittest** - фреймворк для unit-тестирования
+----------------------------------------------------------------------
+Ran 7 tests in 1.377s
 
-### Архитектура:
-- Модульная структура с разделением на классы
-- Отделение логики от представления
-- Обработка исключений для повышения надежности
+OK
+```
+```txt
+ py -m coverage report
 
-## Возможные улучшения
-
-1. Добавление дополнительных математических функций
-2. Поддержка истории вычислений
-3. Темная тема для интерфейса
-4. Поддержка клавиатурного ввода
-5. Экспорт результатов в файл
-
+Name      Stmts   Miss   Cover   Missing
+----------------------------------------
+main.py      98     20  79.59%   37-40, 88-91, 97-103, 106-107, 110-111, 114, 117-118
+----------------------------------------
+TOTAL        98     20  79.59%
+```
 ## Автор
-
+Яковлев И.С.
 Лабораторная работа по unit-тестированию.
